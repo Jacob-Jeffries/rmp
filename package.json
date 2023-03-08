@@ -1,0 +1,21 @@
+{
+  "name": "rmp",
+  "version": "1.0.0",
+  "description": "MSU Bootcamp Project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacob-Jeffries/rmp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacob-Jeffries/rmp/issues"
+  },
+  "homepage": "https://github.com/Jacob-Jeffries/rmp#readme"
+}
