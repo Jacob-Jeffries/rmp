@@ -1,2 +1,2 @@
 # rmp
-MSu Bootcamp Project 2
+MSU Bootcamp Project 2
