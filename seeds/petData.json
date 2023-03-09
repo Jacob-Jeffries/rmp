@@ -1,0 +1,29 @@
+[
+    {
+      "pet_name": "Carlos",
+      "age": 6,
+      "gender": "Male",
+      "special_skills": "Can smell cheese a mile away",
+      "favorite_toy": "Hotdog Squeaker",
+      "filename": "public/images/01-doxie.jpg", 
+      "owner-rating": 5
+    },
+    {
+        "pet_name": "Shirley",
+        "age": 8,
+        "gender": "Female",
+        "special_skills": "Knows where all the sunbeams are",
+        "favorite_toy": "Catnip Mouse",
+        "filename": "public/images/02-siamese.jpg", 
+        "owner-rating": 5
+      },
+      {
+        "pet_name": "Elsie",
+        "age": 3,
+        "gender": "Female",
+        "special_skills": "Her MEOW sounds like a MOO",
+        "favorite_toy": "Her mom's phone charger",
+        "filename": "public/images/03-cowcat.jpg", 
+        "owner-rating": 4
+      }
+  ]
