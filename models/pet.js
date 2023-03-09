@@ -17,6 +17,10 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    type:{
+      type: DataTypes.ENUM('Dog', 'Cat', 'Bird', 'Amphibian', 'Reptile', 'Rodent', 'Exotic'),
+      allowNull: false,
+    },
     gender: {
       type: DataTypes.ENUM('Male', 'Female'),
       allowNull: false,
