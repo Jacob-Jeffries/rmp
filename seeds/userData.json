@@ -25,19 +25,18 @@
       "password": "password12345"
     },
     {
-        "name": "Ellie",
-        "email": "elhess03@gmail.com",
-        "password": "password12345"
-      },
-      {
-        "name": "Jacob",
-        "email": "jacob@gmail.com",
-        "password": "password12345"
-      },
-      {
-        "name": "Nick",
-        "email": "nick@gmail.com",
-        "password": "password12345"
-      }
-    
+      "name": "Ellie",
+      "email": "elhess03@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Jacob",
+      "email": "jacob@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Nick",
+      "email": "nick@gmail.com",
+      "password": "password12345"
+    }    
   ]

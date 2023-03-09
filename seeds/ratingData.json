@@ -1,0 +1,38 @@
+[
+  {
+    "rank": 5,
+    "pet_id": 1
+  },
+  {
+    "rank": 4,
+    "pet_id": 1
+  },
+  {
+    "rank": 3,
+    "pet_id": 1
+  },
+  {
+    "rank": 5,
+    "pet_id": 2
+  },
+  {
+    "rank": 4,
+    "pet_id": 2
+  },
+  {
+    "rank": 3,
+    "pet_id": 2
+  },
+  {
+    "rank": 5,
+    "pet_id": 3
+  },
+  {
+    "rank": 4,
+    "pet_id": 3
+  },
+  {
+    "rank": 3,
+    "pet_id": 3
+  }
+]
