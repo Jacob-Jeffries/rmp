@@ -6,8 +6,9 @@
       "gender": "Male",
       "special_skills": "Can smell cheese a mile away",
       "favorite_toy": "Hotdog Squeaker",
-      "filename": "public/images/01-doxie.jpg", 
-      "owner-rating": 5
+      "filename": "public/images/01-doxie.jpg",
+      "user_id" : 1, 
+      "owner_rating": 5
     },
     {
         "pet_name": "Shirley",
@@ -16,8 +17,9 @@
         "gender": "Female",
         "special_skills": "Knows where all the sunbeams are",
         "favorite_toy": "Catnip Mouse",
-        "filename": "public/images/02-siamese.jpg", 
-        "owner-rating": 5
+        "filename": "public/images/02-siamese.jpg",
+        "user_id": 2,
+        "owner_rating": 5
       },
       {
         "pet_name": "Elsie",
@@ -26,6 +28,7 @@
         "gender": "Female",
         "special_skills": "Her MEOW sounds like a MOO",
         "favorite_toy": "Her mom's phone charger",
+<<<<<<< HEAD
         "filename": "public/images/03-cowcat.jpg", 
         "owner-rating": 4
       },
@@ -78,5 +81,10 @@
         "favorite_toy": "Wheel",
         "filename": "public/images/08-rodent.jpg", 
         "owner-rating": 4
+=======
+        "filename": "public/images/03-cowcat.jpg",
+        "user_id": 3,
+        "owner_rating": 4
+>>>>>>> 306f40795d1bb2946832c23376dfd2d2f7fcb7e1
       }
   ]
