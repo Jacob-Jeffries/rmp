@@ -1,6 +1,7 @@
 [
     {
       "pet_name": "Carlos",
+      "type": "Dog",
       "age": 6,
       "gender": "Male",
       "special_skills": "Can smell cheese a mile away",
@@ -11,6 +12,7 @@
     },
     {
         "pet_name": "Shirley",
+        "type": "Cat",
         "age": 8,
         "gender": "Female",
         "special_skills": "Knows where all the sunbeams are",
@@ -21,12 +23,68 @@
       },
       {
         "pet_name": "Elsie",
+        "type": "Cat",
         "age": 3,
         "gender": "Female",
         "special_skills": "Her MEOW sounds like a MOO",
         "favorite_toy": "Her mom's phone charger",
+<<<<<<< HEAD
+        "filename": "public/images/03-cowcat.jpg", 
+        "owner-rating": 4
+      },
+      {
+        "pet_name": "Daisy",
+        "type": "Dog",
+        "age":6,
+        "gender": "Female",
+        "special_skills": "Can dig her way out of any yard",
+        "favorite_toy": "Lamby the Lamb",
+        "filename": "public/images/04-husky.jpg", 
+        "owner-rating": 4
+      },
+      {
+        "pet_name": "Rocky",
+        "type": "Bird",
+        "age":10,
+        "gender": "Male",
+        "special_skills": "Repeats every swear word in Spanish",
+        "favorite_toy": "Building blocks",
+        "filename": "public/images/05-bird.jpg", 
+        "owner-rating": 3
+      },
+      {
+        "pet_name": "Artie",
+        "type": "Amphibian",
+        "age":2,
+        "gender": "Male",
+        "special_skills": "Will ride on your shoulders for hours",
+        "favorite_toy": "Stuffed lizard",
+        "filename": "public/images/06-amph.jpg", 
+        "owner-rating": 5
+      },
+      {
+        "pet_name": "Kia",
+        "type": "Dog",
+        "age":14,
+        "gender": "Female",
+        "special_skills": "Knows commands in English, Spanish, and Portuguese",
+        "favorite_toy": "a 10 yr old tennis ball",
+        "filename": "public/images/07-gs.jpg", 
+        "owner-rating": 4
+      },
+      {
+        "pet_name": "Gouda",
+        "type": "Rodent",
+        "age":1,
+        "gender": "Female",
+        "special_skills": "Likes to watch Wheel of Fortune",
+        "favorite_toy": "Wheel",
+        "filename": "public/images/08-rodent.jpg", 
+        "owner-rating": 4
+=======
         "filename": "public/images/03-cowcat.jpg",
         "user_id": 3,
         "owner_rating": 4
+>>>>>>> 306f40795d1bb2946832c23376dfd2d2f7fcb7e1
       }
   ]
