@@ -2,8 +2,10 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try {
-        res.render('main')
+        res.render('homepage')
     } catch {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;
