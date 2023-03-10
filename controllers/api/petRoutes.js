@@ -1,11 +1,15 @@
 // Modular GET & POST routes for Pets
 
-const pet = require('express').Router();
+const router = require('express').Router();
 const { Pet } = require('../../models');
 
-pet.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const 
+    const petData = await Pet.findAll();
+    res.status(200).json(petData);
   } catch (err) {
+    res.status(500).json(err);
   }
 });
+
+module.exports = router;
