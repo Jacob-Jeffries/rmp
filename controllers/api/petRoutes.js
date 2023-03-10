@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) =>{
+router.get('/:user_id', async (req, res) =>{
   // const id = parseInt(req.params.user_id);
-  const {id} = req.params
+  const {user_id: id} = req.params
 
   try {
     const petData = await Pet.findAll({
