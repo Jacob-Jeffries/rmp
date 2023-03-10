@@ -28,8 +28,8 @@
         "gender": "Female",
         "special_skills": "Her MEOW sounds like a MOO",
         "favorite_toy": "Her mom's phone charger",
-<<<<<<< HEAD
         "filename": "public/images/03-cowcat.jpg", 
+        "user_id": 3,
         "owner-rating": 4
       },
       {
@@ -40,6 +40,7 @@
         "special_skills": "Can dig her way out of any yard",
         "favorite_toy": "Lamby the Lamb",
         "filename": "public/images/04-husky.jpg", 
+        "user_id": 4,
         "owner-rating": 4
       },
       {
@@ -50,6 +51,7 @@
         "special_skills": "Repeats every swear word in Spanish",
         "favorite_toy": "Building blocks",
         "filename": "public/images/05-bird.jpg", 
+        "user_id": 5,
         "owner-rating": 3
       },
       {
@@ -60,6 +62,7 @@
         "special_skills": "Will ride on your shoulders for hours",
         "favorite_toy": "Stuffed lizard",
         "filename": "public/images/06-amph.jpg", 
+        "user_id": 6,
         "owner-rating": 5
       },
       {
@@ -70,6 +73,7 @@
         "special_skills": "Knows commands in English, Spanish, and Portuguese",
         "favorite_toy": "a 10 yr old tennis ball",
         "filename": "public/images/07-gs.jpg", 
+        "user_id": 7,
         "owner-rating": 4
       },
       {
@@ -80,11 +84,7 @@
         "special_skills": "Likes to watch Wheel of Fortune",
         "favorite_toy": "Wheel",
         "filename": "public/images/08-rodent.jpg", 
+        "user_id": 8,
         "owner-rating": 4
-=======
-        "filename": "public/images/03-cowcat.jpg",
-        "user_id": 3,
-        "owner_rating": 4
->>>>>>> 306f40795d1bb2946832c23376dfd2d2f7fcb7e1
       }
   ]

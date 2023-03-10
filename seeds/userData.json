@@ -29,7 +29,6 @@
       "email": "the_blake@yahoo.com",
       "password": "password12345"
     },
-<<<<<<< HEAD
       {
         "name": "Jacob",
         "email": "jacob@gmail.com",
@@ -41,21 +40,4 @@
         "password": "password12345"
       }
     
-=======
-    {
-      "name": "Ellie",
-      "email": "elhess03@gmail.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Jacob",
-      "email": "jacob@gmail.com",
-      "password": "password12345"
-    },
-    {
-      "name": "Nick",
-      "email": "nick@gmail.com",
-      "password": "password12345"
-    }    
->>>>>>> 306f40795d1bb2946832c23376dfd2d2f7fcb7e1
   ]
