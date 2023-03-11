@@ -11,6 +11,11 @@ body {
 
 }
 
+.carousel .carousel-inner img {
+  display:block;
+  object-fit: cover;
+}
+
  /* :root {
   --primary: #3d5852;
   --secondary: #86938f;
