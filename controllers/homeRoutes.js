@@ -19,4 +19,20 @@ router.get('/login', (req, res) => {
     }
   });
 
+  router.get('/ratings', async (req, res) => {
+    try {
+        res.render('ratings')
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/user', async (req, res) => {
+    try {
+        res.render('userportal')
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
