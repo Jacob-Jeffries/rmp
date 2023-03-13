@@ -8,4 +8,15 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/login', (req, res) => {
+    try {
+        if (req.session.loggedIn) {
+            res.redirect('/');
+          }
+          res.render('login');
+    } catch {
+        res.status(500).json(err);
+    }
+  });
+
 module.exports = router;
