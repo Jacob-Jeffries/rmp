@@ -11,6 +11,11 @@ body {
 
 }
 
+.ratePet {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
  /* :root {
   --primary: #3d5852;
