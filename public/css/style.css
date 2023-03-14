@@ -46,6 +46,11 @@ body {
   margin: 2%;
 }
 
+.ratingImage {
+  display: flex;
+  justify-content: center;
+}
+
  /* :root {
   --primary: #3d5852;
   --secondary: #86938f;
