@@ -20,7 +20,11 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
         <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+        {{/if}}
       </li>
       <li class="nav-item">
         <a class="nav-link" href="">Leaderboard</a>
@@ -33,6 +37,10 @@
 </nav>
 
 {{{body}}}
+
+{{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+{{/if}}
 
 <script src="https://kit.fontawesome.com/c217ff9a09.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -6,6 +6,8 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
@@ -18,6 +20,24 @@ router.post('/', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Get all pets associated with a single user
+router.get('/:user_id', async (req, res) =>{
+  // const id = parseInt(req.params.user_id);
+  const {user_id: id} = req.params
+
+  try {
+    const petData = await Pet.findAll({
+      where: {
+        user_id: id
+      }
+    })
+    res.status(200).json(petData);
+
+  }catch(err){
     res.status(500).json(err);
   }
 });
@@ -38,7 +58,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await dbUserData.checkPassword(req.body.password);
+    const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
