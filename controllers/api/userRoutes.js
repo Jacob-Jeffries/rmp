@@ -42,6 +42,16 @@ router.get('/:user_id', async (req, res) =>{
   }
 });
 
+router.get('/singleUser/:user_id', async (req, res) =>{
+  try {
+    const userData = await User.findByPk(req.params.user_id)
+    res.status(200).json(userData);
+
+  }catch(err){
+    res.status(500).json(err);
+  }
+});
+
 // Login
 router.post('/login', async (req, res) => {
   try {
@@ -69,6 +79,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.userID = db
       console.log(
         '🚀 ~ file: userRoutes.js ~ line 58 ~ req.session.save ~ req.session.cookie',
         req.session.cookie
