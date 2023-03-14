@@ -31,7 +31,10 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/user', async (req, res) => {
-    try {
+    try {  
+        if (req.session.loggedIn) {
+        res.redirect('/user');
+      }
         res.render('userportal')
     } catch {
         res.status(500).json(err);
