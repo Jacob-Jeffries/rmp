@@ -24,6 +24,24 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Get all pets associated with a single user
+router.get('/:user_id', async (req, res) =>{
+  // const id = parseInt(req.params.user_id);
+  const {user_id: id} = req.params
+
+  try {
+    const petData = await Pet.findAll({
+      where: {
+        user_id: id
+      }
+    })
+    res.status(200).json(petData);
+
+  }catch(err){
+    res.status(500).json(err);
+  }
+});
+
 // Login
 router.post('/login', async (req, res) => {
   try {
