@@ -2,6 +2,9 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try {
+        if (req.session.loggedIn) {
+            res.redirect('/user');
+          }
         res.render('homepage')
     } catch {
         res.status(500).json(err);
@@ -11,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
     try {
         if (req.session.loggedIn) {
-            res.redirect('/');
+            res.redirect('/user');
           }
           res.render('login');
     } catch {
