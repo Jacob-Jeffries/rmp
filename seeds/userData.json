@@ -1,41 +1,51 @@
 [
     {
-        "name": "Ellie",
+        "first_name": "Ellie",
+        "last_name": "Hess",
+        "username": "EllieH",
         "email": "elhess03@gmail.com",
         "password": "password12345"
       },
     {
-      "name": "Sal",
+        "first_name": "Ellie",
+        "last_name": "Hess",
+        "username": "Sal",
       "email": "sal@hotmail.com",
       "password": "password12345"
     },
-    {
-      "name": "Lernantino",
+    {"first_name": "Ellie",
+    "last_name": "Hess",
+      "username": "Lernantino",
       "email": "lernantino@gmail.com",
       "password": "password12345"
     },
-    {
-      "name": "Maddie",
+    {"first_name": "Ellie",
+    "last_name": "Hess",
+      "username": "Maddie",
       "email": "maddie20@aol.com",
       "password": "password12345"
     },
-    {
-      "name": "Jordan",
+    {"first_name": "Ellie",
+    "last_name": "Hess",
+      "username": "Jordan",
       "email": "jordan99@msn.com",
       "password": "password12345"
     },
-    {
-      "name": "Blake",
+    {"first_name": "Ellie",
+    "last_name": "Hess",
+      "username": "Blake",
       "email": "the_blake@yahoo.com",
       "password": "password12345"
     },
-      {
-        "name": "Jacob",
+      {"first_name": "Ellie",
+      "last_name": "Hess",
+        "username": "Jacob",
         "email": "jacob@gmail.com",
         "password": "password12345"
       },
-      {
-        "name": "Nick",
+      {"first_name": "Ellie",
+      "last_name": "Hess",
+        "username": "Nick",
         "email": "nick@gmail.com",
         "password": "password12345"
       }
