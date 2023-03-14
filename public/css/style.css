@@ -17,6 +17,35 @@ body {
   padding: 20px;
 }
 
+.rateBtn {
+  margin-left: 10px;
+}
+
+.dashTitle {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.userCard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.userIcon {
+  width: 40%;
+  padding: 2%;
+}
+
+.userInfo {
+  width: 70%;
+}
+
+.addPet {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
  /* :root {
   --primary: #3d5852;
   --secondary: #86938f;

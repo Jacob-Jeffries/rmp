@@ -1,25 +1,25 @@
-<h1>Pet Owner Dashboard</h1>
+<h1 class="dashTitle">Pet Owner Dashboard</h1>
 
-<section>
-    <div>
+<section class="userCard">
+    <div class="userIcon">
         <img src="" alt="user photo">
     </div>
 
-    <div>
+    <div class="userInfo">
         <ul>
-            <li>Owner Name</li>
+            <li>{{first_name}}{{last_name}}</li>
             <li>Number of Pets</li>
         </ul>
     </div>
 </section>
 
-<section>
+<section class="addPet">
     <h3>Pets</h3>
     
     {{!-- https://codingyaar.com/bootstrap-5-modal-form/ --}}
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    <img src="" alt="add pet button">
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
+    <i class="fa-solid fa-plus"></i>
     </button>
 
     <!-- Modal -->
@@ -55,17 +55,14 @@
         <div class="card mb-3" style="max-width:540px;">
             <div class="row g-0">
                 <div class="col-md-6">
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" 
-                        class="img-fluid rounded-start" alt="...">
+                    <img src="/images/01-doxie.jpg"class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">
-                            Pet Name
+                            {{pet.name}}
                         </h5>
                        <ul>
-                        <li>Pet Name</li>
                         <li>Pet Type</li>
                         <li>Gender</li>
                         <li>Special Skill</li>
