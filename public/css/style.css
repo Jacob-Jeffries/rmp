@@ -47,6 +47,12 @@ body {
 }
 
 
+.ratingImage {
+  display: flex;
+  justify-content: center;
+}
+
+
  /* :root {
   --primary: #3d5852;
   --secondary: #86938f;
@@ -145,7 +151,6 @@ img {
   font-weight: bold;
 }
 
-/* CARDS */
  .card {
   margin: 20px;
   flex: 0 1 300px;
@@ -195,7 +200,7 @@ img {
   margin-left: 16px;
 }
 
-/*.gallery-name {
+.gallery-name {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
@@ -204,12 +209,11 @@ img {
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left: 100px;
-}  */
+} 
 
-/* LAYOUT */
  .container {
   display: flex;
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
-} 
+} */
