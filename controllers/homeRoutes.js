@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
+        res.render('homepage', {loggedIn: req.session.loggedIn})
     } catch {
         res.status(500).json(err);
     }
@@ -10,8 +10,10 @@ router.get('/', async (req, res) => {
 
 router.get('/login', (req, res) => {
     try {
+        console.log(req.session)
         if (req.session.loggedIn) {
             res.redirect('/');
+            return;
           }
           res.render('login');
     } catch {
@@ -22,6 +24,14 @@ router.get('/login', (req, res) => {
   router.get('/ratings', async (req, res) => {
     try {
         res.render('ratings')
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/leaderboard', async (req, res) => {
+    try {
+        res.render('leaderboard')
     } catch {
         res.status(500).json(err);
     }
