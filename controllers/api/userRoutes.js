@@ -79,7 +79,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.userID = dbUserData.id;
+      req.session.userId = dbUserData.id;
       console.log(
         '🚀 ~ file: userRoutes.js ~ line 58 ~ req.session.save ~ req.session.cookie',
         req.session.cookie
@@ -94,5 +94,18 @@ router.post('/login', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//Logout
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+
 
 module.exports = router;
