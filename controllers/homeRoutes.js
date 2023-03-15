@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
             res.redirect('/user');
           }
         res.render('homepage', {loggedIn: req.session.loggedIn})
+        return;
     } catch {
         res.status(500).json(err);
     }
