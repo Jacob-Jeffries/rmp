@@ -5,7 +5,7 @@ router.get('/', async (req, res) => {
         if (req.session.loggedIn) {
             res.redirect('/user');
           }
-        res.render('homepage')
+        res.render('homepage', {loggedIn: req.session.loggedIn})
     } catch {
         res.status(500).json(err);
     }
@@ -24,7 +24,7 @@ router.get('/login', (req, res) => {
 
   router.get('/ratings', async (req, res) => {
     try {
-        res.render('ratings')
+        res.render('ratings', {loggedIn: req.session.loggedIn})
     } catch {
         res.status(500).json(err);
     }
@@ -32,7 +32,7 @@ router.get('/login', (req, res) => {
 
 router.get('/user', async (req, res) => {
     try {  
-        res.render('userportal')
+        res.render('userportal',{loggedIn: req.session.loggedIn})
     } catch {
         res.status(500).json(err);
     }
