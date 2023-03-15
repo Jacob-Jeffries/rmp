@@ -18,9 +18,7 @@
     
     {{!-- https://codingyaar.com/bootstrap-5-modal-form/ --}}
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
-    <i class="fa-solid fa-plus"></i>
-    </button>
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">Add a New Pet!</button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -33,17 +31,51 @@
             </button>
         </div>
         <div class="modal-body">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Add Pet</button>
-        </div>
+            <form action="/stats" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label for="pet_name">Pet Name</label>
+                    <input type="text" name="pet_name" id="pet_name">
+                        <br>
+                    <label for="type">Pet Type</label>
+                    <select name="type" id="type">
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Amphibian">Amphibian</option>
+                        <option value="Reptile">Reptile</option>
+                        <option value="Rodent">Rodent</option>
+                        <option value="Exotic">Exotic - Anything Else</option>
+                    </select>
+                        <br>
+                    <label for="gender">Pet Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                        <br>
+                    <label for="special_skills">Special Skills</label>
+                    <input type="text" name="special_skills" id="special_skills">
+                        <br>
+                    <label for="favorite_toy">Favorite Toy</label>
+                    <input type="text" name="favorite_toy" id="favorite_toy">
+                        <br>
+                    <label for="upload_file">Upload an single image of your Pet</label>
+                    <input type="file" class="form-control-file" name="uploaded_file">
+                        <br>
+                    <label for="owner_rating">Owner Rating</label>
+                    <select name="owner_rating" id="owner_rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add Pet</button>
+                </div>
+            </form>
         </div>
     </div>
     </div>
