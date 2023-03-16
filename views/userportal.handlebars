@@ -31,7 +31,7 @@
             </button>
         </div>
         <div class="modal-body">
-            <form action="/api/pets/" enctype="multipart/form-data" method="post">
+                            <form action="http://localhost:3001/api/pets/" method="POST">
                 <div class="form-group">
                     <label for="pet_name">Pet Name</label>
                     <input type="text" name="pet_name" id="pet_name">
@@ -60,7 +60,7 @@
                     <input type="text" name="favorite_toy" id="favorite_toy">
                         <br>
                     <label for="upload_file">Upload an single image of your Pet</label>
-                    <input type="file" class="form-control-file" name="uploaded_file">
+                    <input type="file" class="form-control-file" name="upload_image">
                         <br>
                     <label for="owner_rating">Owner Rating</label>
                     <select name="owner_rating" id="owner_rating">
@@ -70,11 +70,9 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                    <input type="submit" class="btn btn-primary" value="Add Your New Pet">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add Pet</button>
-                </div>
+            </form>
             </form>
         </div>
     </div>

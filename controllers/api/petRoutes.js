@@ -6,15 +6,23 @@ const multer = require('multer');
 const upload = multer({ dest: 'images/' });
 
 
-router.post('/', upload.single('upload_image'), async (req, res) => {
-  console.log(req.file, req.body);
-  // try {
-  //   console.log(req.body);
-  //   const petData = await Pet.create(req.body);
-  //   res.status(200).json(petData);
-  // }catch(err){
-  //   res.status(500).json(err);
-  // }
+router.post('/', async (req, res) => {
+  try {
+    console.log(req.body);
+    const petData = await Pet.create({
+      pet_name: req.body.pet_name,
+      type: req.body.type,
+      gender: req.body.gender,
+      special_skills: req.body.special_skills,
+      favorite_toy: req.body.favorite_toy,
+      filename: req.body.upload_image,
+      user_id: req.session.userId,
+      owner_rating: req.body.owner_rating
+    });
+    res.status(200).redirect('/user')
+  }catch(err){
+    res.status(500).json(err);
+  }
 });
 
 router.get('/', async (req, res) => {

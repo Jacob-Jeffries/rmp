@@ -1,6 +1,7 @@
 // Modular GET & POST routes for Users
 const router = require('express').Router();
 const { User } = require('../../models');
+const { Pet } = require('../../models');
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -25,18 +26,14 @@ router.post('/', async (req, res) => {
 });
 
 // Get all pets associated with a single user
-router.get('/:user_id', async (req, res) =>{
-  // const id = parseInt(req.params.user_id);
-  const {user_id: id} = req.params
-
+router.get('/:id', async (req, res) =>{
   try {
     const petData = await Pet.findAll({
       where: {
-        user_id: id
+        user_id: req.params.id
       }
-    })
+    });
     res.status(200).json(petData);
-
   }catch(err){
     res.status(500).json(err);
   }
