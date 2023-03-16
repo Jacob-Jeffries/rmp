@@ -2,12 +2,36 @@
 
 const router = require('express').Router();
 const { Pet } = require('../../models');
-const { update } = require('../../models/user');
+const multer = require('multer');
 
-router.post('/', async (req, res) => {
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix +'.jpg')
+  }
+})
+
+const upload = multer({ storage: storage })
+
+
+
+router.post('/', upload.single('uploaded_image'), async (req, res) => {
   try {
-    const petData = await Pet.create(req.body);
-    res.status(200).json(petData);
+    console.log(req.body);
+    const petData = await Pet.create({
+      pet_name: req.body.pet_name,
+      type: req.body.type,
+      gender: req.body.gender,
+      special_skills: req.body.special_skills,
+      favorite_toy: req.body.favorite_toy,
+      filename: `/images/${req.file.filename}`,
+      user_id: req.session.userId,
+      owner_rating: req.body.owner_rating
+    });
+    res.status(200).redirect('/user')
   }catch(err){
     res.status(500).json(err);
   }
