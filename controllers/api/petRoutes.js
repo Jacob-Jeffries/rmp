@@ -3,10 +3,22 @@
 const router = require('express').Router();
 const { Pet } = require('../../models');
 const multer = require('multer');
-const upload = multer({ dest: 'images/' });
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix +'.jpg')
+  }
+})
+
+const upload = multer({ storage: storage })
 
 
-router.post('/', async (req, res) => {
+
+router.post('/', upload.single('uploaded_image'), async (req, res) => {
   try {
     console.log(req.body);
     const petData = await Pet.create({
@@ -15,7 +27,7 @@ router.post('/', async (req, res) => {
       gender: req.body.gender,
       special_skills: req.body.special_skills,
       favorite_toy: req.body.favorite_toy,
-      filename: req.body.upload_image,
+      filename: `/images/${req.file.filename}`,
       user_id: req.session.userId,
       owner_rating: req.body.owner_rating
     });

@@ -31,13 +31,13 @@
             </button>
         </div>
         <div class="modal-body">
-                            <form action="http://localhost:3001/api/pets/" method="POST">
+                <form action="http://localhost:3001/api/pets/" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="pet_name">Pet Name</label>
-                    <input type="text" name="pet_name" id="pet_name">
+                    <input type="text" name="pet_name" id="pet_name" class="form-control">
                         <br>
                     <label for="type">Pet Type</label>
-                    <select name="type" id="type">
+                    <select name="type" id="type" class="form-control">
                         <option value="Dog">Dog</option>
                         <option value="Cat">Cat</option>
                         <option value="Bird">Bird</option>
@@ -48,22 +48,22 @@
                     </select>
                         <br>
                     <label for="gender">Pet Gender</label>
-                    <select name="gender" id="gender">
+                    <select name="gender" id="gender" class="form-control">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
                         <br>
                     <label for="special_skills">Special Skills</label>
-                    <input type="text" name="special_skills" id="special_skills">
+                    <input type="text" name="special_skills" id="special_skills" class="form-control">
                         <br>
                     <label for="favorite_toy">Favorite Toy</label>
-                    <input type="text" name="favorite_toy" id="favorite_toy">
+                    <input type="text" name="favorite_toy" id="favorite_toy" class="form-control">
                         <br>
                     <label for="upload_file">Upload an single image of your Pet</label>
-                    <input type="file" class="form-control-file" name="upload_image">
+                    <input type="file" class="form-control-file" name="uploaded_image">
                         <br>
                     <label for="owner_rating">Owner Rating</label>
-                    <select name="owner_rating" id="owner_rating">
+                    <select name="owner_rating" id="owner_rating" class="form-control">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
