@@ -49,6 +49,10 @@ Pet.init(
       type: DataTypes.INTEGER,
       allowNull:false,
     },
+    other_rating: {
+      type: DataTypes.INTEGER,
+      allowNull:false,
+    }
   },
   {
     sequelize,

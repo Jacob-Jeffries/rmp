@@ -26,10 +26,12 @@ router.get('/login', (req, res) => {
     }
   });
 
-  router.get('/ratings', async (req, res) => {
+  router.get('/ratings/:id', async (req, res) => {
     try {
-        res.render('ratings', {loggedIn: req.session.loggedIn})
-    } catch {
+        const pet = await Pet.findByPk(req.params.id)
+        console.log(pet)
+        res.render('ratings', {filename: pet.filename})
+    } catch (err){
         res.status(500).json(err);
     }
 });
@@ -43,7 +45,6 @@ router.get('/user', async (req, res) => {
               }
         }
         )
-        console.log(pet)
         res.render('userportal',
         {loggedIn: req.session.loggedIn,
         first_name: user.first_name,
