@@ -1,17 +1,6 @@
-<h1 class="dashTitle">Pet Owner Dashboard</h1>
-
-<section class="userCard">
-    <div class="userIcon">
-        <img src="" alt="user photo">
-    </div>
-
-    <div class="userInfo">
-        <ul>
-            <li>{{first_name}} {{last_name}}</li>
-            <li>Number of Pets</li>
-        </ul>
-    </div>
-</section>
+<div  class="dashTitle">
+    <h1>{{first_name}}'s Pet Dashboard</h1>
+</div>
 
 <section class="addPet">
     <h3>Pets</h3>
@@ -90,14 +79,14 @@
                 <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">
-                            {{pet.name}}
+                            {{pet_name}}
                         </h5>
                        <ul>
-                        <li>Pet Type</li>
-                        <li>Gender</li>
-                        <li>Special Skill</li>
-                        <li>Favorite Toy</li>
-                        <li>Owner Rating</li>
+                        <li>{{pet_type}}</li>
+                        <li>{{pet_gender}}</li>
+                        <li>{{pet_skill}}</li>
+                        <li>{{pet_toy}}</li>
+                        <li>{{owner_rating}}</li>
                         <li>Others Rating</li>
                        </ul>
                     </div>
