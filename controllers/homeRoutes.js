@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { where } = require('sequelize');
 const { User } = require('../models');
 const { Pet } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
@@ -26,7 +27,7 @@ router.get('/login', (req, res) => {
     }
   });
 
-  router.get('/ratings/:id', async (req, res) => {
+  router.get('/ratings/:id', withAuth, async (req, res) => {
     try {
         const pet = await Pet.findByPk(req.params.id)
         console.log(pet)
@@ -58,6 +59,14 @@ router.get('/user', async (req, res) => {
         // others_rating: ,
         })
     } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/oops', async (req, res) => {
+    try {
+        res.render('oops')
+    } catch {
         res.status(500).json(err);
     }
 });
