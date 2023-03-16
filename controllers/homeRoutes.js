@@ -31,13 +31,15 @@ router.get('/login', (req, res) => {
     try {
         const pet = await Pet.findByPk(req.params.id)
         console.log(pet)
-        res.render('ratings', {filename: pet.filename})
+        res.render('ratings',
+         {loggedIn: req.session.loggedIn,
+            filename: pet.filename,})
     } catch (err){
         res.status(500).json(err);
     }
 });
 
-router.get('/user', async (req, res) => {
+router.get('/user', withAuth, async (req, res) => {
     try {  
         const user = await User.findByPk(req.session.userId)
         const pet = await Pet.findAll({
