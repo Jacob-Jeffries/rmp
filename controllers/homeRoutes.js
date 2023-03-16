@@ -27,15 +27,19 @@ router.get('/login', (req, res) => {
     }
   });
 
-  router.get('/ratings', withAuth, async (req, res) => {
+  router.get('/ratings/:id', withAuth, async (req, res) => {
     try {
-        res.render('ratings', {loggedIn: req.session.loggedIn})
-    } catch {
+        const pet = await Pet.findByPk(req.params.id)
+        console.log(pet)
+        res.render('ratings',
+         {loggedIn: req.session.loggedIn,
+            filename: pet.filename,})
+    } catch (err){
         res.status(500).json(err);
     }
 });
 
-router.get('/user', async (req, res) => {
+router.get('/user', withAuth, async (req, res) => {
     try {  
         const user = await User.findByPk(req.session.userId)
         const pet = await Pet.findAll({
@@ -44,7 +48,6 @@ router.get('/user', async (req, res) => {
               }
         }
         )
-        console.log(pet)
         res.render('userportal',
         {loggedIn: req.session.loggedIn,
         first_name: user.first_name,
