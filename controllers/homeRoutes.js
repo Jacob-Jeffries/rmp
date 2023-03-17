@@ -4,6 +4,8 @@ const { User } = require('../models');
 const { Pet } = require('../models');
 const withAuth = require('../utils/auth');
 
+const sequelize = require('../config/connection');
+
 router.get('/', async (req, res) => {
     try {
         if (req.session.loggedIn) {
@@ -27,13 +29,18 @@ router.get('/login', (req, res) => {
     }
   });
 
-  router.get('/ratings/:id', withAuth, async (req, res) => {
+  router.get('/ratings', withAuth, async (req, res) => {
+    
     try {
-        const pet = await Pet.findByPk(req.params.id)
-        console.log(pet)
+
+        const results = await sequelize.query("SELECT * FROM pet ORDER BY RAND() LIMIT 1");
+        console.log("test")
+        req.session.petId = results.id;
+        console.log(results)
+        console.log(results[1][0])
         res.render('ratings',
          {loggedIn: req.session.loggedIn,
-            filename: pet.filename,})
+            filename: results[1][0].filename,})
     } catch (err){
         res.status(500).json(err);
     }
@@ -74,3 +81,4 @@ router.get('/oops', async (req, res) => {
 });
 
 module.exports = router;
+
