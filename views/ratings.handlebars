@@ -5,7 +5,17 @@
     <h3>{{pet_name}}</h3>
 </div>
  <div class="ratePet">
-    <input placeholder="Rate Pet: 1-5" type="text">
-    <button class="btn btn-light rateBtn" type="submit">Submit</button>
+    <form action="http://localhost:3001/api/ratings/" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="rank">🐎😻 Pet Rating 🐶</label>
+        <select name="rank" id="rank" class="form-control">
+            <option value="1">💗</option>
+            <option value="2">💗💗</option>
+            <option value="3">💗💗💗</option>
+            <option value="4">💗💗💗💗</option>
+            <option value="5">💗💗💗💗💗</option>
+        </select>
+        <input type="submit" class="btn btn-primary" value="Add New Pet Rating!">       
+    </div>
  </div>
 
