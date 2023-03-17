@@ -30,18 +30,9 @@ router.get('/login', (req, res) => {
   });
 
   router.get('/ratings', withAuth, async (req, res) => {
-    
     try {
-
-        const results = await sequelize.query("SELECT * FROM pet ORDER BY RAND() LIMIT 1");
-        console.log("test")
-        req.session.petId = results.id;
-        console.log(results)
-        console.log(results[1][0])
-        res.render('ratings',
-         {loggedIn: req.session.loggedIn,
-            filename: results[1][0].filename,})
-    } catch (err){
+        res.render('ratings', {loggedIn: req.session.loggedIn})
+    } catch {
         res.status(500).json(err);
     }
 });
@@ -55,6 +46,7 @@ router.get('/user', withAuth, async (req, res) => {
               }
         }
         )
+        console.log(pet)
         res.render('userportal',
         {loggedIn: req.session.loggedIn,
         first_name: user.first_name,

@@ -8,8 +8,8 @@
       "favorite_toy": "Hotdog Squeaker",
       "filename": "/images/01-doxie.jpg",
       "user_id" : 1, 
-      "owner_rating": 5,
-      "other_rating": 5
+      "owner_rating": 5
+     
     },
     {
         "pet_name": "Shirley",
@@ -20,8 +20,7 @@
         "favorite_toy": "Catnip Mouse",
         "filename": "/images/02-siamese.jpg",
         "user_id": 2,
-        "owner_rating": 5,
-        "other_rating": 5
+        "owner_rating": 5
       },
       {
         "pet_name": "Elsie",
@@ -32,8 +31,7 @@
         "favorite_toy": "Her mom's phone charger",
         "filename": "/images/03-cowcat.jpg", 
         "user_id": 3,
-        "owner_rating": 4,
-        "other_rating": 5
+        "owner_rating": 4
       },
       {
         "pet_name": "Daisy",
@@ -56,8 +54,7 @@
         "favorite_toy": "Building blocks",
         "filename": "/images/05-bird.jpg", 
         "user_id": 5,
-        "owner_rating": 3,
-        "other_rating": 5
+        "owner_rating": 3
       },
       {
         "pet_name": "Artie",
@@ -68,8 +65,7 @@
         "favorite_toy": "Stuffed lizard",
         "filename": "/images/06-amph.jpg", 
         "user_id": 6,
-        "owner_rating": 5,
-        "other_rating": 5
+        "owner_rating": 5
       },
       {
         "pet_name": "Kia",
@@ -80,8 +76,7 @@
         "favorite_toy": "a 10 yr old tennis ball",
         "filename": "/images/07-gs.jpg", 
         "user_id": 7,
-        "owner_rating": 4,
-        "other_rating": 5
+        "owner_rating": 4
       },
       {
         "pet_name": "Gouda",
@@ -92,7 +87,6 @@
         "favorite_toy": "Wheel",
         "filename": "/images/08-rodent.jpg", 
         "user_id": 8,
-        "owner_rating": 4,
-        "other_rating": 5
+        "owner_rating": 4
       }
   ]
