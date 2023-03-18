@@ -72,5 +72,13 @@ router.get('/oops', async (req, res) => {
     }
 });
 
+router.get('/leaderboard', async (req, res) => {
+    try {
+        res.render('leaderboard')
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
 
