@@ -1,3 +1,4 @@
+<section class="row">
 <div class="ratingImage">
     <img src="{{filename}}" alt="random cute pet">
 </div>
@@ -5,17 +6,18 @@
     <h3>{{pet_name}}</h3>
 </div>
  <div class="ratePet">
-    <form action="http://localhost:3001/api/ratings/" method="POST" enctype="multipart/form-data">
+    <form action="http://localhost:3001/api/ratings/" method="POST">
     <div class="form-group">
-        <label for="rank">🐎😻 Pet Rating 🐶</label>
+        <label for="rank">🐎😻 Pet Rating 🐶🐹</label>
         <select name="rank" id="rank" class="form-control">
-            <option value="1">💗</option>
-            <option value="2">💗💗</option>
-            <option value="3">💗💗💗</option>
-            <option value="4">💗💗💗💗</option>
-            <option value="5">💗💗💗💗💗</option>
+            <option value=1>💗</option>
+            <option value=2>💗💗</option>
+            <option value=3>💗💗💗</option>
+            <option value=4>💗💗💗💗</option>
+            <option value=5>💗💗💗💗💗</option>
         </select>
         <input type="submit" class="btn btn-primary" value="Add New Pet Rating!">       
     </div>
  </div>
+</section>
 
