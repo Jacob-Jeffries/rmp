@@ -72,3 +72,35 @@ body {
   justify-content: center;
   font-size: 30px;
 }
+
+
+.login-card {
+  margin: 20px 0 20px 0;
+  flex: 0 0 45%;
+  max-width: 60%;
+  padding: 20px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: groove;
+  border-width: thick;
+  background-color: #7f99e2;
+  color: var(--light);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  /* text-align: center; */
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
