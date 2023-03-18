@@ -68,29 +68,32 @@
     </div>
 </section>
 
-<section>
+<section class="m-4">
     {{!-- https://www.geeksforgeeks.org/bootstrap-5-cards-horizontal/ --}}
-    <div class="container d-flex mt-4 p-4 ">
-        <div class="card mb-3 box-shadow" style="max-width:540px;">
+    {{#each apiData}}
+    <div class="container d-flex mt-4 p-4 row flex-wrap">
+        <div class="card mb-3 box-shadow" style="max: width 400px, object-fit: contain;">
             <div class="row g-0">
                 <div class="col-md-6">
-                    <img src="/images/01-doxie.jpg"class="img-fluid rounded-start" alt="...">
+                    <img src="{{this.filename}}" class="img-fluid rounded-start" alt="{{this.pet_name}}">
                 </div>
                 <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">
-                            {{pet_name}}
+                            {{this.pet_name}}
                         </h5>
                        <ul>
-                        <li>{{pet_type}}</li>
-                        <li>{{pet_gender}}</li>
-                        <li><b>Special Skills: </b>{{pet_skill}} </li>
-                        <li><b>Favorite Toy: </b>{{pet_toy}}</li>
-                        <li><b>Rating: </b>{{owner_rating}}</li>
-                        <li><b>Others Rating: </b></li>
+                        <li>{{this.type}}</li>
+                        <li>{{this.gender}}</li>
+                        <li><b>Special Skills: </b>{{this.special_skills}} </li>
+                        <li><b>Favorite Toy: </b>{{this.favorite_toy}}</li>
+                        <li><b>Owner Rating: </b>{{this.owner_rating}}</li>
                        </ul>
                     </div>
+                    <h5 class="text-center">All Users Average Rating: {{this.average}}</h5>
                 </div>
             </div>
         </div>
+    </div>
+    {{/each}}
 </section>
