@@ -5,14 +5,15 @@ const { Rating } = require('../../models');
 // Create a new rating
 router.post('/', async (req, res) => {
   try{
-    console.log(req.body);
-    console.log(req.session.petId);
+    // console.log(req.body);
+    // console.log(req.session.petId);
     const ratingData = await Rating.create({
       rank: req.body.rank,
       pet_id: req.session.petId
     });
-    res.status(200).redirect('/ratings');
+    res.redirect('/ratings');
   }catch(err){
+    console.log(err);
     res.status(500).json(err);
   }
 });
