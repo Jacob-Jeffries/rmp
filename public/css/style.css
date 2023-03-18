@@ -23,6 +23,7 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+
 a {
   color: var(--dark);
   text-decoration: none;
@@ -50,7 +51,6 @@ a:visited {
 /* This section of code sets the style for the /ratings page */
 #ratingImage{
   width: 400px;
-  height: 400px;
   object-fit: contain;
 }
 /* This ENDS the /ratings style*/

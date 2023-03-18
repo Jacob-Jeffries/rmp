@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { where } = require('sequelize');
-const { User } = require('../models');
-const { Pet } = require('../models');
+const { User, Pet, Rating } = require('../models');
 const withAuth = require('../utils/auth');
 
 const sequelize = require('../config/connection');
@@ -57,21 +56,39 @@ router.get('/user', withAuth, async (req, res) => {
             where: {
                 user_id: req.session.userId
               }
+        });
+        let petArray =[]
+        let newCount;
+
+        for(let i=0; i < pet.length; i++){
+            const count = await Rating.count({
+                where: {
+                  pet_id: pet[i].dataValues.id
+            }}) + 1; 
+              
+            const sumRating = await Rating.sum('rank', {
+            where: {
+                pet_id: pet[i].dataValues.id
+            }}) + pet[i].dataValues.owner_rating;
+            
+            const average = sumRating / count;
+
+            pet[i].dataValues.sum = sumRating;
+            pet[i].dataValues.count = count;
+            pet[i].dataValues.average = average.toFixed(1);
+
+            petArray.push(pet[i].dataValues);
         }
-        )
-        console.log(pet)
+
+        console.log('---');
+        console.log(petArray);
         res.render('userportal',
-        {loggedIn: req.session.loggedIn,
+        {
+        loggedIn: req.session.loggedIn,
         first_name: user.first_name,
         last_name: user.last_name,
-        pet_name: pet[0].pet_name,
-        pet_type: pet[0].type,
-        pet_gender: pet[0].gender,
-        pet_skill: pet[0].special_skills,
-        pet_toy: pet[0].favorite_toy,
-        owner_rating: pet[0].owner_rating,
-        // others_rating: ,
-        })
+        apiData: petArray
+        });
     } catch (err) {
         res.status(500).json(err);
     }
