@@ -11,6 +11,14 @@ body {
 
 }
 
+button a {
+  color: white;
+}
+
+.nav-box-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .ratePet {
   display: flex;
   justify-content: center;
@@ -29,6 +37,7 @@ body {
 .dashTitle {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .userCard {
