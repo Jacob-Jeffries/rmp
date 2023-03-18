@@ -20,29 +20,30 @@
   <div class = "container">
   <div class="login-card">
     <h2 class="page-title">Sign Up to Show off Your Pets!</h2>
-    <form class="form signup-form">
+    {{!-- Start of Sign Up modal --}}
+    <form action="http://localhost:3001/api/users/" method="POST" class="form signup-form">
       <div class="form-group">
         <label for="firstname-signup"></label>
-        <input class="form-input" type="text" placeholder="First Name" id="firstname-signup" />
+        <input class="form-input" type="text" name="first_name" placeholder="First Name" id="firstname-signup" />
       </div>
        <div class="form-group">
         <label for="lastname-signup"></label>
-        <input class="form-input" type="text" placeholder="Last Name" id="lastname-signup" />
+        <input class="form-input" type="text" name="last_name" placeholder="Last Name" id="lastname-signup" />
       </div>
       <div class="form-group">
         <label for="username-signup"></label>
-        <input class="form-input" type="text" placeholder="Username" id="username-signup" />
+        <input class="form-input" type="text" name="username" placeholder="Username" id="username-signup" />
       </div>
       <div class="form-group">
         <label for="email-signup"></label>
-        <input class="form-input" type="text" placeholder="Email" id="email-signup" />
+        <input class="form-input" type="text" name="email" placeholder="Email" id="email-signup" />
       </div>
       <div class="form-group">
         <label for="password-signup"></label>
-        <input class="form-input" type="password" placeholder="Password" id="password-signup" />
+        <input class="form-input" type="password" name="password" placeholder="Password" id="password-signup" />
       </div>
       <div class="form-group">
-        <button class="btn btn-light" type="submit">Sign Up!</button>
+      <input type="submit" class="btn btn-light" value="Sign Up!">
       </div>
     </form>
   </div>

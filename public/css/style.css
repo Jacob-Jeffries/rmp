@@ -1,3 +1,7 @@
+:root {
+  --dark: #182c23;
+}
+
 html {
   background: #8e9eab;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eef2f3, #d9dbdb, #eef2f3);  /* Chrome 10-25, Safari 5.1-6 */
@@ -11,15 +15,24 @@ body {
 
 }
 
-button a {
+/* button a {
   color: white;
-}
+} */
 
 .nav-box-shadow {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.ratePet {
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--dark);
+}
+
+/* .ratePet {
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -32,7 +45,7 @@ button a {
 
 .rateBtn {
   margin-left: 10px;
-}
+} */
   
 /* This section of code sets the style for the /ratings page */
 #ratingImage{
@@ -101,9 +114,14 @@ button a {
   padding: 20px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  border-radius: 5%;
   border-style: groove;
   border-width: thick;
-  background-color: #7f99e2;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  0 10px 10px rgba(0,0,0,0.22);
+  /* background-color: #7f99e2; */
+  background: rgb(165,247,229);
+  background: linear-gradient(0deg, rgba(165,247,229,1) 0%, rgba(39,118,133,1) 100%);
   color: var(--light);
 }
 
@@ -119,8 +137,111 @@ button a {
 }
 
 .form-group {
-  /* text-align: center; */
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
+}
+
+.signup {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  /* display: inline-flex; */
+  justify-content: center;
+  /* flex-wrap: wrap;   */
+  background: rgb(165,247,229);
+  background: linear-gradient(0deg, rgba(165,247,229,1) 0%, rgba(39,118,133,1) 100%);
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+.shimmer {
+		font-family: "Lato";
+		font-weight: 300;
+		font-size: 3em;
+		margin: 0 auto;
+		margin-bottom: 0;
+}
+
+p {
+		font-family: "Lato";
+		font-weight: 300;
+		font-size: 1em;
+		color: rgba(255, 255, 255, 0.65);
+		width: 500px;
+		line-height: 1.5em;
+		border-top: 1px dashed rgba(255, 255, 255, 0.2);
+		margin: 10px 0 0 5px;
+}
+
+p a {
+		text-decoration: none;
+		color: #fff;
+}
+
+p a:visted {
+		color: #fff;
+}
+
+.shimmer {
+		text-align: center;
+		color: rgba(255, 255, 255, 0.1);
+		background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+		background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+		background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+		-webkit-background-size: 125px 100%;
+		-moz-background-size: 125px 100%;
+		background-size: 125px 100%;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		-webkit-animation-name: shimmer;
+		-moz-animation-name: shimmer;
+		animation-name: shimmer;
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-color: #222;
+}
+
+@-moz-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@-webkit-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@-o-keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
+}
+
+@keyframes shimmer {
+		0% {
+				background-position: top left;
+		}
+		100% {
+				background-position: top right;
+		}
 }
