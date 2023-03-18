@@ -104,7 +104,15 @@ router.get('/oops', async (req, res) => {
 
 router.get('/leaderboard', async (req, res) => {
     try {
-        res.render('leaderboard')
+        res.render('leaderboard', {loggedIn: req.session.loggedIn})
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/signup', async (req, res) => {
+    try {
+        res.render('signup')
     } catch {
         res.status(500).json(err);
     }
