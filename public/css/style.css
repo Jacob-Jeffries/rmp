@@ -79,7 +79,7 @@ body {
 .login-card {
   margin: 20px 0 20px 0;
   flex: 0 0 45%;
-  max-width: 50%;
+  max-width: 60%;
   padding: 20px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
@@ -91,7 +91,6 @@ body {
 
 .container {
   display: flex;
-  /* flex-flow: column wrap; */
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -102,5 +101,8 @@ body {
 }
 
 .form-group {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
 }
