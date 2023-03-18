@@ -11,20 +11,13 @@ body {
 
 }
 
-.ratePet {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+/* This section of code sets the style for the /ratings page */
+#ratingImage{
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
 }
-
-.rateName {
-  display: flex;
-  justify-content: center;
-}
-
-.rateBtn {
-  margin-left: 10px;
-}
+/* This ENDS the /ratings style*/
 
 .dashTitle {
   display: flex;

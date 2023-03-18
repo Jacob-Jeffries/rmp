@@ -34,13 +34,16 @@ router.get('/login', (req, res) => {
 
         const results = await sequelize.query("SELECT * FROM pet ORDER BY RAND() LIMIT 1");
         console.log("test")
-        req.session.petId = results.id;
+        req.session.petId = results[1][0].id;
         console.log(results)
         console.log(results[1][0])
 
         res.render('ratings', {
             loggedIn: req.session.loggedIn,
-            filename: results[1][0].filename
+            filename: results[1][0].filename,
+            pet_name: results[1][0].pet_name,
+            special_skills: results[1][0].special_skills,
+            favorite_toy: results[1][0].favorite_toy
         })
     } catch {
         res.status(500).json(err);

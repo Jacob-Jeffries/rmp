@@ -1,14 +1,26 @@
-<div class="ratingImage">
-    <img src="{{filename}}" alt="random cute pet">
-</div>
-<div class="rateName">
-    <h3>{{pet_name}}</h3>
-</div>
-<div class="rateName">
-    <h3>{{pet_name}}</h3>
-</div>
- <div class="ratePet">
-    <input placeholder="Rate Pet: 1-5" type="text">
-    <button class="btn btn-light rateBtn" type="submit">Submit</button>
- </div>
+<section class="d-flex flex-wrap justify-content-around">
+    <img src="{{filename}}" alt="random cute pet" id="ratingImage" class="m-3">
+    <div class="align-self-center m-3" >
+        <div class="rateName">
+            <h3 class="text-center">{{pet_name}}</h3>
+            <p>{{special_skills}}</p>
+            <p>{{favorite_toy}}</p>
+        </div>
+        <div class="ratePetForm">
+            <form action="http://localhost:3001/api/ratings/" method="POST">
+                <div class="form-group">
+                    <label for="rank">🐎😻 Pet Rating 🐶🐹</label>
+                    <select name="rank" id="rank" class="form-control text-center">
+                        <option value="1">💗</option>
+                        <option value="2">💗💗</option>
+                        <option value="3">💗💗💗</option>
+                        <option value="4">💗💗💗💗</option>
+                        <option value="5">💗💗💗💗💗</option>
+                    </select>
+                    <input type="submit" class="btn btn-primary" value="Love this Pet!">       
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
