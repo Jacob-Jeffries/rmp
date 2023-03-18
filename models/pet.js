@@ -48,7 +48,7 @@ Pet.init(
     owner_rating: {
       type: DataTypes.INTEGER,
       allowNull:false,
-    },
+    }
   },
   {
     sequelize,

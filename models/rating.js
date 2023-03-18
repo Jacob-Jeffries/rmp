@@ -14,7 +14,7 @@ Rating.init(
       autoIncrement: true,
     },
     rank: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: false,
     },
     pet_id: {

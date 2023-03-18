@@ -30,7 +30,6 @@ router.get('/login', (req, res) => {
   });
 
   router.get('/ratings', withAuth, async (req, res) => {
-    
     try {
         const results = await sequelize.query("SELECT * FROM pet ORDER BY RAND() LIMIT 1");
         req.session.petId = results[1][0].id;
@@ -58,6 +57,7 @@ router.get('/user', withAuth, async (req, res) => {
               }
         }
         )
+        console.log(pet)
         res.render('userportal',
         {loggedIn: req.session.loggedIn,
         first_name: user.first_name,
@@ -78,6 +78,14 @@ router.get('/user', withAuth, async (req, res) => {
 router.get('/oops', async (req, res) => {
     try {
         res.render('oops')
+    } catch {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/leaderboard', async (req, res) => {
+    try {
+        res.render('leaderboard')
     } catch {
         res.status(500).json(err);
     }
