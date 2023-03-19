@@ -84,8 +84,7 @@ router.post('/login', async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' })
-        .redirect('https://murmuring-garden-13240.herokuapp.com/');        
+        .json({ user: dbUserData, message: 'You are now logged in!' });      
     });
   } catch (err) {
     console.log(err);
