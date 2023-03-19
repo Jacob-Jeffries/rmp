@@ -15,14 +15,13 @@ body {
 
 }
 
-/* button a {
-  color: white;
-} */
+.account {
+  margin-top: 7px;
+}
 
 .nav-box-shadow {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
 
 a {
   color: var(--dark);
@@ -32,21 +31,6 @@ a {
 a:visited {
   color: var(--dark);
 }
-
-/* .ratePet {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.rateName {
-  display: flex;
-  justify-content: center;
-}
-
-.rateBtn {
-  margin-left: 10px;
-} */
   
 /* This section of code sets the style for the /ratings page */
 #ratingImage{
