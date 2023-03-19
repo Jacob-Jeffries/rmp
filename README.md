@@ -19,7 +19,21 @@ This is a full-stack web application for users with pets who are able to log in 
 - [Questions](#questions)
 
 ## :eye: Visuals
-![PetStar dog homepage ](Screen Shot 2023-03-18 at 9.04.02 PM.png "PetStar homepage")
+
+![localhost_3001_(iPhone SE) (3)](https://user-images.githubusercontent.com/118075347/226147029-d5cf190e-e104-45b7-81c4-e187a9388fee.png)
+
+![localhost_3001_oops](https://user-images.githubusercontent.com/118075347/226147052-1c9b6c0a-ca36-46af-bfe1-5fae51f8fb1d.png)
+
+![localhost_3001_login](https://user-images.githubusercontent.com/118075347/226147059-d16ca51c-2cc0-4029-af2b-b6a7c4fe4a17.png)
+
+![localhost_3001_user](https://user-images.githubusercontent.com/118075347/226147044-c5476f36-b5d2-4762-9a3a-581626bb8ee2.png)
+
+![localhost_3001_signup(iPhone SE)](https://user-images.githubusercontent.com/118075347/226147085-2afbea71-7916-4b16-8ae5-edc4e1cedf49.png)
+
+![localhost_3001_ratings](https://user-images.githubusercontent.com/118075347/226147103-76ab0de2-8dea-4815-a056-34baa7ed5121.png)
+
+![localhost_3001_user (1)](https://user-images.githubusercontent.com/118075347/226147158-37f0c481-b3fa-485a-b315-0994e528306c.png)
+
 [Click here for Webpage](http://localhost:3001/)
 
 ## :hammer_and_wrench: Installation
