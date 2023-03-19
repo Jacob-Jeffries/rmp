@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
     try {
         if (req.session.loggedIn) {
-            res.redirect('/user');
+            res.redirect('https://murmuring-garden-13240.herokuapp.com/user');
           }
           res.render('login');
     } catch {
