@@ -8,7 +8,7 @@ const sequelize = require('../config/connection');
 router.get('/', async (req, res) => {
     try {
         if (req.session.loggedIn) {
-            res.redirect('https://murmuring-garden-13240.herokuapp.com/user');
+            res.redirect('/user');
             return;
           }
         res.render('homepage', {loggedIn: req.session.loggedIn})
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
     try {
         if (req.session.loggedIn) {
-            res.redirect('https://murmuring-garden-13240.herokuapp.com/user');
+            res.redirect('/user');
           }
           res.render('login');
     } catch {
