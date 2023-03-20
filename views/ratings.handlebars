@@ -2,9 +2,9 @@
     <img src="{{filename}}" alt="random cute pet" id="ratingImage" class="m-3">
     <div class="align-self-center m-3" >
         <div class="rateName">
-            <h3 class="text-center">{{pet_name}}</h3>
-            <p>{{special_skills}}</p>
-            <p>{{favorite_toy}}</p>
+            <h2 class="text-center">{{pet_name}}</h2>
+            <h6><strong>Special Skill:</strong>  {{special_skills}}</h6>
+            <h6><strong>Favorite Toy:</strong> {{favorite_toy}}</h6>
         </div>
         <div class="ratePetForm">
             <form action="http://localhost:3001/api/ratings/" method="POST">
@@ -17,7 +17,7 @@
                         <option value="4">💗💗💗💗</option>
                         <option value="5">💗💗💗💗💗</option>
                     </select>
-                    <input type="submit" class="btn btn-primary" value="Love this Pet!">       
+                    <input type="submit" class="btn btn-primary ratebtn" value="Love this Pet!">       
                 </div>
             </form>
         </div>

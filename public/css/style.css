@@ -74,6 +74,10 @@ a:visited {
   justify-content: center;
 }
 
+.ratebtn {
+  margin: 10px;
+}
+
 .image {
   display: flex;
   justify-content: center;
