@@ -46,6 +46,8 @@ Then, the application will be invoked by using one of the following commands:
 
 ## :zap: Usage
 
+https://murmuring-garden-13240.herokuapp.com/
+
 ![localhost_3001_(iPhone SE) (3)](https://user-images.githubusercontent.com/118075347/226147029-d5cf190e-e104-45b7-81c4-e187a9388fee.png)
 
 When you open the application, you will be on the homepage. You can either "Create an Account" shown on the bottom of the screen or "Login" which is both on the bottom of the screen and on the Navigation bar above.
