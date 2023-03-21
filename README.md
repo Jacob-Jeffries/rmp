@@ -22,7 +22,7 @@ This is a full-stack web application for users with pets who are able to log in 
 
 ![localhost_3001_(iPhone SE) (3)](https://user-images.githubusercontent.com/118075347/226147029-d5cf190e-e104-45b7-81c4-e187a9388fee.png)
 
-[Click here for Webpage](http://localhost:3001/)
+[Click here for Webpage](https://murmuring-garden-13240.herokuapp.com/)
 
 ## :hammer_and_wrench: Installation
 
@@ -100,5 +100,6 @@ Email Address:
 
     nwherman1724@gmail.com
     elhess03@gmail.com
+    jeffrij85@gmail.com
 
 Email us if you have additional questions!
