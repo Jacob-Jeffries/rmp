@@ -46,7 +46,7 @@ Then, the application will be invoked by using one of the following commands:
 
 ## :zap: Usage
 
-https://dashboard.heroku.com/apps/murmuring-garden-13240
+https://murmuring-garden-13240.herokuapp.com/
 
 ![localhost_3001_(iPhone SE) (3)](https://user-images.githubusercontent.com/118075347/226147029-d5cf190e-e104-45b7-81c4-e187a9388fee.png)
 
